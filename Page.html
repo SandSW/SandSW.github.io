@@ -74,8 +74,10 @@
 
     <!-- Optional JavaScript -->
     
+    $(document).ready(function () {
+    
 <script>
-    var $item = $('.carousel-item');
+var $item = $('.carousel-item');
 var $wHeight = $(window).height();
 
 $item.height($wHeight); 
@@ -113,6 +115,8 @@ $(window).on('resize', function (){
 $('.carousel').carousel({
   interval: 6000,
   pause: "false"
+});
+  
 });
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
