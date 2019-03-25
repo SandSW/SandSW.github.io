@@ -14,24 +14,11 @@
     
     <title>Full Screen Gallery</title>
 <style>  
-    h5 {
-  display: inline-block;
-  padding: 10px;
-  background: #B9121B;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.full-screen {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-/*if you don't want the indicators or/and the controls*/
-/*.carousel-indicators,
-.carousel-control {
-  display: none;
-}*/
-    </style>
+  
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+  
+</style>
   </head>
   <body>
     
@@ -74,6 +61,13 @@
             </ul>
         </div>
     </nav>
+    
+ <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+  <div class="grid-item">...</div>
+  <div class="grid-item grid-item--width2">...</div>
+  <div class="grid-item">...</div>
+  ...
+</div>
     
     
     </script>
