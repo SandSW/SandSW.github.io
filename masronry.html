@@ -11,7 +11,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
     
     <title>Full Screen Gallery</title>
@@ -97,25 +97,6 @@ body { font-family: sans-serif; }
         </div>
     </nav>
     
-<script>
-   
-// external js: masonry.pkgd.js, imagesloaded.pkgd.js
-
-var grid = document.querySelector('.grid');
-var msnry;
-
-imagesLoaded( grid, function() {
-  // init Isotope after all images have loaded
-  msnry = new Masonry( grid, {
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-  });
-});
-  
-</script>
-
-    
 <h1>Masonry - imagesLoaded callback, vanilla JS</h1>
 
 <div class="grid">
@@ -151,10 +132,23 @@ imagesLoaded( grid, function() {
   <i class="fas fa-bowling-ball"></i>
 </div>
 
+<script>
+   
+// external js: masonry.pkgd.js, imagesloaded.pkgd.js
 
-    
-    
-    </script>
+var grid = document.querySelector('.grid');
+var msnry;
+
+imagesLoaded( grid, function() {
+  // init Isotope after all images have loaded
+  msnry = new Masonry( grid, {
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+});
+  
+</script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
