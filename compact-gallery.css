@@ -373,7 +373,7 @@ border-radius: 2px; }
 .typed_wrap {
 	display: block;
 	border: 4px solid #ecf0f1;
-	width: 290px;
+	width: auto;
 	height: auto;
 	padding: 30px;
 	
